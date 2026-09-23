@@ -1,0 +1,9 @@
+{
+  "name": "pumpfun-shred-feed-examples",
+  "private": true,
+  "type": "module",
+  "description": "Clients for the pump.fun shred feed (https://178-105-104-17.sslip.io/)",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
