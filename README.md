@@ -7,10 +7,15 @@ leader broadcasts the transaction, before the block is confirmed. Clean JSON, on
 
 | | |
 |---|---|
-| Median lead over PumpPortal's free websocket on new coins | ~140-160 ms (measured live on the page, last hour) |
+| Median lead over PumpPortal's free websocket on new coins | ~140-160 ms, measured from our server in Germany (live on the page) |
 | New pump.fun coins announced first | 100% of the coins both feeds saw in our measurements |
+| Server location | Germany (Frankfurt region). Best for bots hosted in Europe |
 | Price | 0.4 SOL / 30 days, up to 2 connections per key |
 | Trial | free, 1 hour, from the page |
+
+Where the lead comes from, honestly: we decode shreds, so we see a transaction as the leader broadcasts it; PumpPortal
+serves from New York, so part of the lead measured from Germany is distance. From US East the gap is smaller. Run
+[`examples/race.mjs`](examples/race.mjs) from your own server and judge for yourself.
 
 Since Jito ShredStream shut down (5 Sep 2026), shred-level data costs $200-1,500/month from the big providers. This is
 the part most pump.fun bots actually need, decoded, for a fraction of that.
